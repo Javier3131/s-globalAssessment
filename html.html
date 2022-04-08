@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <input id="symbolInput" type="text" class="form-control" placeholder="Symbol Lookup"
+                        aria-label="Symbol Lookup" aria-describedby="btnSymbolLookUp">
+                    <button class="btn btn-primary" type="button" id="btnSymbolLookUp" onclick="callGetQuoate('test')">
+                        <i class="bi bi-check-circle-fill text-light"></i>
+                        Button</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultDiv" style="display: none;">
+            <div class="row">
+                <div class="col-md-6">
+                    <label id="name" class="h3">MICROSOFT CORP</label>
+                    <label id="symbol" class="h3">(MSFT)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label id="lastPrice" class="h2">72.28</label>
+                    <label id="change" class="text-success h4">+0.52</label>
+                    <label class="h4">(</label><label id="changePercent" class="text-success h4">+0.72</label><label
+                        class="h4">)%</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="text-muted">As of </label><label id="timeStamp" class="text-muted"> 10:00:00 PM
+                        ET</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table">
+                        <tr>
+                            <td class="text-muted">Range</td>
+                            <td><label id="low" class="fw-bolder">71.81</label> - <label id="high"
+                                    class="fw-bolder">72.89</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">Open</td>
+                            <td><label id="open" class="fw-bolder">71.97</label></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">Volume</td>
+                            <td><label id="volume" class="fw-bolder">33.3M</label></td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">Market Cap</td>
+                            <td><label id="marketCap" class="fw-bolder">558.0B</label></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorDiv" style="display: none;">
+            <div class="row">
+                <h2>Something went wrong...</h2>
+                <h3 id="error" class="text-danger"></h3>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
